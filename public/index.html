@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta property="og:type" content="indeex" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:videosrc" content="" />
+    <meta property="og:width" content="300" />
+    <meta property="og:height" content="600" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title></title>
+    <script>
+        (function(window, document) {
+            var baseSize = 37.5;
+
+            function setRem() {
+                var scale = document.documentElement.clientWidth / 375;
+                document.documentElement.style.fontSize = baseSize * Math.min(scale, 2) + 'px';
+            }
+            setRem()
+            window.onresize = function() {
+                setRem();
+            }
+
+            function modifileRootRem() {
+                var root = document.documentElement;
+                var fontSize = parseFloat(root.style.fontSize);
+                var finalFontSize = parseFloat(window.getComputedStyle(root).getPropertyValue('font-size'));
+                if (finalFontSize === fontSize) return;
+                root.style.fontSize = fontSize + (fontSize - finalFontSize) + 'px';
+            }
+            if (typeof window.onload === 'function') {
+                var oldFun = window.onload;
+                window.onload = function() {
+                    oldFun();
+                    modifileRootRem();
+                }
+            } else {
+                window.onload = modifileRootRem;
+            }
+        })(window, document);
+    </script>
+</head>
+
+<body>
+    <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+{
+    "name": "tiku",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "start": "node scripts/script.js serve",
+        "serve": "npm start",
+        "dev": "npm start",
+        "build": "node scripts/script.js build",
+        "lint": "vue-cli-service lint apps common"
+    },
+    "dependencies": {
+        "@better-scroll/core": "^2.4.1",
+        "@better-scroll/pull-up": "^2.4.1",
+        "amfe-flexible": "^2.2.1",
+        "axios": "^0.21.1",
+        "clipboard": "^2.0.8",
+        "clipboard-polyfill": "^3.0.3",
+        "core-js": "^3.6.5",
+        "dayjs": "^1.10.6",
+        "image-conversion": "^2.1.1",
+        "normalize.css": "^8.0.1",
+        "plupload": "^2.3.7",
+        "register-service-worker": "^1.7.1",
+        "swiper": "5.2.0",
+        "vant": "^2.12.20",
+        "vconsole": "^3.6.1",
+        "vue": "^2.6.11",
+        "vue-awesome-swiper": "^4.1.1",
+        "vue-clipboard2": "^0.3.1",
+        "vue-infinite-scroll": "^2.0.2",
+        "vue-ios-pickers": "^1.4.11",
+        "vue-meta": "^2.4.0",
+        "vue-router": "^3.2.0",
+        "vuedraggable": "^2.24.3",
+        "vuex": "^3.4.0"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "~4.5.0",
+        "@vue/cli-plugin-eslint": "~4.5.0",
+        "@vue/cli-plugin-pwa": "~4.5.0",
+        "@vue/cli-plugin-router": "~4.5.0",
+        "@vue/cli-plugin-vuex": "~4.5.0",
+        "@vue/cli-service": "~4.5.0",
+        "babel-eslint": "^10.1.0",
+        "babel-plugin-transform-remove-console": "^6.9.4",
+        "chalk": "^4.1.1",
+        "compression-webpack-plugin": "^8.0.1",
+        "cross-env": "^7.0.3",
+        "eslint": "^6.7.2",
+        "eslint-plugin-vue": "^6.2.2",
+        "fuzzy": "^0.1.3",
+        "glob": "^7.1.7",
+        "globby": "^11.0.0",
+        "inquirer": "^8.1.2",
+        "inquirer-autocomplete-prompt": "^1.4.0",
+        "less-loader": "^10.0.1",
+        "node-sass": "^5.0.0",
+        "postcss-px2rem": "^0.3.0",
+        "sass": "^1.32.12",
+        "sass-loader": "^10.1.1",
+        "vue-template-compiler": "^2.6.11"
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/essential",
+            "eslint:recommended"
+        ],
+        "parserOptions": {
+            "parser": "babel-eslint"
+        },
+        "rules": {}
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ]
+}
